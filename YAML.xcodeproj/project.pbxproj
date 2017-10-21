@@ -262,10 +262,7 @@
 					/usr/local/Cellar/boost/1.65.1/include/,
 					/usr/local/Cellar/libyaml/0.1.7/include,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/0.1.7/lib,
-					/usr/local/Cellar/libyaml/0.1.7/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/libyaml/0.1.7/lib;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-Wall",
@@ -291,10 +288,7 @@
 					/usr/local/Cellar/boost/1.65.1/include/,
 					/usr/local/Cellar/libyaml/0.1.7/include,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/0.1.7/lib,
-					/usr/local/Cellar/libyaml/0.1.7/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/libyaml/0.1.7/lib;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-Wall",

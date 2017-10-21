@@ -10,18 +10,16 @@
 #define node_hpp
 
 #include <boost/variant.hpp>
-#include <boost/unordered_map.hpp>
+#include <unordered_map>
 #include <vector>
 #include <string>
 
 namespace YAML {
-  class Node;
-
   class Node {
   public:
     struct Undefined {};
     using Scalar = std::string;
-    using Map = boost::unordered_map<Node, Node>;
+    using Map = std::unordered_map<Node, Node>;
     using Sequence = std::vector<Node>;
   
     Node() = default;
