@@ -6,8 +6,17 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45BA38771F9B5ED300BAEA1E /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BA38751F9B5ED300BAEA1E /* node.cpp */; };
+		45BA38781F9B5ED300BAEA1E /* node.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 45BA38761F9B5ED300BAEA1E /* node.hpp */; };
+		45BA387C1F9B6BC700BAEA1E /* libyaml-0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA387B1F9B6BC700BAEA1E /* libyaml-0.2.dylib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		45BA386A1F9B5CA900BAEA1E /* libYAML.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libYAML.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		45BA38751F9B5ED300BAEA1E /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
+		45BA38761F9B5ED300BAEA1E /* node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = node.hpp; sourceTree = "<group>"; };
+		45BA387B1F9B6BC700BAEA1E /* libyaml-0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libyaml-0.2.dylib"; path = "../../../../../../usr/local/Cellar/libyaml/0.1.7/lib/libyaml-0.2.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -15,6 +24,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BA387C1F9B6BC700BAEA1E /* libyaml-0.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -24,7 +34,10 @@
 		45BA38611F9B5CA900BAEA1E = {
 			isa = PBXGroup;
 			children = (
+				45BA38721F9B5DFF00BAEA1E /* Libraries */,
+				45BA38711F9B5DE900BAEA1E /* YAML */,
 				45BA386B1F9B5CA900BAEA1E /* Products */,
+				45BA387A1F9B6BC700BAEA1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -36,6 +49,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		45BA38711F9B5DE900BAEA1E /* YAML */ = {
+			isa = PBXGroup;
+			children = (
+				45BA38751F9B5ED300BAEA1E /* node.cpp */,
+				45BA38761F9B5ED300BAEA1E /* node.hpp */,
+			);
+			path = YAML;
+			sourceTree = "<group>";
+		};
+		45BA38721F9B5DFF00BAEA1E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		45BA387A1F9B6BC700BAEA1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45BA387B1F9B6BC700BAEA1E /* libyaml-0.2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -43,6 +80,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BA38781F9B5ED300BAEA1E /* node.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BA38771F9B5ED300BAEA1E /* node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +258,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.65.1/include/,
+					/usr/local/Cellar/libyaml/0.1.7/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/0.1.7/lib,
+					/usr/local/Cellar/libyaml/0.1.7/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-Wall",
+					"-Wextra",
+					"-Weffc++",
+					"-Wpedantic",
+					"-Wextra-semi",
+					"-Wno-documentation",
+					"-std=c++1z",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -230,6 +287,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/boost/1.65.1/include/,
+					/usr/local/Cellar/libyaml/0.1.7/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/0.1.7/lib,
+					/usr/local/Cellar/libyaml/0.1.7/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-Wall",
+					"-Wextra",
+					"-Weffc++",
+					"-Wpedantic",
+					"-Wextra-semi",
+					"-Wno-documentation",
+					"-std=c++1z",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
