@@ -27,6 +27,11 @@ namespace YAML {
 
   using NodePtr = std::shared_ptr<Node>;
 
+  template <typename ...Args>
+  NodePtr makeNode(Args &&... args) {
+    return std::make_shared<Node>(std::forward<Args>(args)...);
+  }
+
   class Node {
   public:
     struct Undefined {};
@@ -52,6 +57,8 @@ namespace YAML {
     const Map &map() const;
     Sequence &sequence();
     const Sequence &sequence() const;
+    
+    NodePtr deepCopy() const;
     
   private:
     boost::variant<
